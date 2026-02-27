@@ -1,0 +1,20 @@
+Bootstrap: docker
+From: python:3.13.7
+
+%post
+    pip install --no-cache-dir -r requirements.txt
+
+%files
+    src/ /app/src
+    model/ /app/model
+    data/ /app/data
+    requirements.txt
+
+%environment
+    export PYTHONPATH=/app
+
+%runscript
+    python /app/src/predict.py "$@"
+
+%help
+    Some help for this container

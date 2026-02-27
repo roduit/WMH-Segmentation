@@ -1,0 +1,8 @@
+services:
+  mlapp:
+    container_name: mlapp
+    image: vroduit/wmh_qmaps_predictor
+    command: ["--mpm", "MT.nii"]
+    build:
+      context: .
+      dockerfile: Dockerfile

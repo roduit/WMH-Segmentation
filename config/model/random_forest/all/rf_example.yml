@@ -1,0 +1,40 @@
+experiment: RandomForest
+maps: All
+feat: Raw
+description: LightGBM with all maps and neighbor features
+proc: Clean
+dataset:
+  name: DatasetName
+  path: /path/to/data
+  csv_name: dataset_description.csv
+  save: false
+  save_folder: save_name
+  preprocessing:
+  - name: cleaning
+  - name: wm_voxels_only
+  size: 1e6
+
+# Model
+model:
+  name : "RandomForest"
+  config:
+    rf_base:
+      n_estimators: 100
+      max_depth: 20
+      random_state: 42
+      class_weight: "balanced_subsample"
+      max_features: "sqrt"
+      min_samples_split: 2
+      min_samples_leaf: 10
+
+    num_folds: 5
+
+    grid_search:
+      n_trials: 30
+      param_grid:
+        n_estimators: [100, 1000]
+        max_depth: [5, 30]
+        min_samples_split: [5, 20]
+        min_samples_leaf: [2, 10]
+        max_features: ["sqrt", "log2"]
+        n_iter: 30

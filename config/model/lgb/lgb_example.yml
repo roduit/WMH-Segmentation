@@ -1,0 +1,59 @@
+experiment: LGBM
+maps: All
+feat: Local
+description: LightGBM with all maps and neighbor features
+proc: Clean
+dataset:
+  name: DatasetName
+  path: /path/to/your/dataset
+  csv_name: dataset_description.csv
+  features:
+  - name: neighbor_features
+    characteristics:
+      window_size: 3
+  save: false
+  save_folder: save_name
+  preprocessing:
+  - name: cleaning
+  size: 1e6
+model:
+  name: LGB
+  config:
+    lgb_base:
+      boosting_type: gbdt
+      objective: binary
+      max_depth: -1
+      learning_rate: 0.01
+      n_estimators: 150
+    num_folds: 2
+    num_thresholds: 100
+    grid_search:
+      n_trials: 30
+      param_grid:
+        n_estimators:
+        - 100
+        - 1000
+        learning_rate:
+        - 0.01
+        - 0.1
+        num_leaves:
+        - 20
+        - 100
+        max_depth:
+        - 5
+        - 30
+        min_child_samples:
+        - 5
+        - 100
+        subsample:
+        - 0.6
+        - 1.0
+        colsample_bytree:
+        - 0.6
+        - 1.0
+        reg_alpha:
+        - 1e-8
+        - 10.0
+        reg_lambda:
+        - 1e-8
+        - 10.0

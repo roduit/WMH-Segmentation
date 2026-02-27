@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wmh_thesis"
+version = "0.1.0"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+lint.select = [
+    "ALL"
+]
+
+lint.ignore = [
+    "D203",
+    "D213",
+    "COM",
+    "D100",
+    "FBT",
+    "D101",
+    "S603"
+]
+
+exclude = ["*.ipynb"]
+
+[tool.ruff.lint.pylint]
+max-args = 10
+
+[tool.ruff.format]
+line-ending = "lf"
+quote-style = "double"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+docstring-code-line-length = 88

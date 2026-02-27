@@ -1,0 +1,9 @@
+---
+experiment: "Summary"
+name: "LGB"
+description: "Summary of RF experiments"
+
+runs:
+# MPM
+  - "id": "mlflow_id"
+    "name": "RunName" #"MPM:Raw:Clean"
