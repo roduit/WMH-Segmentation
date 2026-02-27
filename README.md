@@ -10,15 +10,12 @@
 
 ## Table of Contents
 
-- [Abstract](#abstract)
 - [Repository Structure](#repository-structure)
 - [Getting Started](#getting-started)
     - [Mlflow](#mlflow)
     - [Optuna](#optuna)
 - [Data](#data)
 - [Credits](#credits)
-
-# Abstract
 
 # Repository structure
 The top-level structure of the repository is the following:
