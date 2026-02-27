@@ -63,7 +63,7 @@ Alternatively, you can use the image by providing a csv file with columns:
 I, A, FA, ICVF, ISOVF, MD, MT, OD, R1, R2s_OLS, g_ratio, MASK and OUT_DIR, where **ID** is the participant id, **MASK** is the neuromorphometric mask and **OUT_DIR** is the output directory where to save the results and each row correspond to a subjet.
 
 > [!NOTE]
-> A CSV example is provided [here](./data/sample_data/samle_data.csv).
+> A CSV example is provided [here](./data/sample_data/sample_data.csv).
 
 > [!TIP]
 > This approach is recommended if you want to predict mutliple participants.
