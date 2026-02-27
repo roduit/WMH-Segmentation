@@ -28,8 +28,6 @@ wmh_thesis/
 ├─config/
 ├─data/
 ├─deployment/
-├─model_testing/
-├─others/
 ├─resources/
 ├─src/
 ├─.env
@@ -45,8 +43,6 @@ A dedicated README is placed in the different folders if needed.
 ## Main folders
 - [config](./config): contains example of configuration files to train the model
 - [data](./data/): contains additional data needed for the project as well as results.
-- [model_testing](./model_testing/): scripts used for testing other models for comparison.
-- [others](./others/): other scripts, for pre-commit for instance.
 - [resources](./resources/): contains figures for readme.
 - [src](./src/): contains all the code developped in the project.
 
