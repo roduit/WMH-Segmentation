@@ -22,7 +22,7 @@ deployment/
 - [src](./src/): contains the source code to produce the image.
 - [Dockerfile](./Dockerfile): config file for Docker
 - [app.def](app.def): config file for apptainer.
-- [docler-compose.yml](./docker-compose.yml): docker-compose file.
+- [docker-compose.yml](./docker-compose.yml): docker-compose file.
 
 # Build the aptainer image
 To build the Apptainer image, run the following command:
