@@ -55,9 +55,6 @@ To be able to use the image you need to provide data in the following format:
 
 </center>
 
-> [!NOTE]
-> A data folder example is provided [here](./data/sample_data/).
-
 > [!TIP]
 > If you want to use the Diffusion-only model, you only need to provide PD*, FA, ICVF, ISOVF, MD and OD.
 
